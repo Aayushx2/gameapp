@@ -1,0 +1,7 @@
+{
+    "reports": [],
+    "limits": {
+        "timeLimit": 30,
+        "spendingLimit": 500
+    }
+}

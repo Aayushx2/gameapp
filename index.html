@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible Gaming Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Responsible Gaming</h1>
+        <p>Enhancing Trust, Transparency, and Responsible Gaming</p>
+    </header>
+
+    <section id="login">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+    </section>
+
+    <section id="user-greeting">
+        <!-- Personalized message will appear here after login -->
+    </section>
+
+    <section id="game-reporting">
+        <h2>Report an Issue</h2>
+        <textarea id="report" placeholder="Describe the issue (harassment, fraud, etc.)"></textarea>
+        <button onclick="submitReport()">Submit Report</button>
+    </section>
+
+    <section id="game-transparency">
+        <h2>Game Transparency</h2>
+        <p>Understand game rules and fairness</p>
+        <button onclick="showGameRules()">Show Game Rules</button>
+    </section>
+
+    <section id="responsible-gaming">
+        <h2>Set Your Limits</h2>
+        <label for="time-limit">Time Limit (in minutes):</label>
+        <input type="number" id="time-limit" placeholder="Enter minutes">
+        <label for="spending-limit">Spending Limit (in INR):</label>
+        <input type="number" id="spending-limit" placeholder="Enter amount">
+        <button onclick="setLimits()">Set Limits</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Responsible Gaming Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
