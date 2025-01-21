@@ -17,6 +17,7 @@
         <input type="text" id="username" placeholder="Enter Username">
         <input type="password" id="password" placeholder="Enter Password">
         <button onclick="login()">Login</button>
+        <div id="login-message" class="hidden"></div> <!-- Success notification -->
     </section>
 
     <section id="user-greeting">
@@ -25,8 +26,14 @@
 
     <section id="game-reporting">
         <h2>Report an Issue</h2>
-        <textarea id="report" placeholder="Describe the issue (harassment, fraud, etc.)"></textarea>
-        <button onclick="submitReport()">Submit Report</button>
+        <div id="report-form">
+            <input type="text" id="concern" placeholder="Type your concern">
+            <input type="text" id="game-name" placeholder="Which game did you face this issue in?">
+            <textarea id="report" placeholder="More information about the issue"></textarea>
+            <input type="text" id="assistance-number" placeholder="Enter your number for assistance">
+            <button onclick="submitReport()">Submit Report</button>
+        </div>
+        <div id="follow-up-questions" class="hidden"></div>
     </section>
 
     <section id="game-transparency">
@@ -37,15 +44,34 @@
 
     <section id="responsible-gaming">
         <h2>Set Your Limits</h2>
-        <label for="time-limit">Time Limit (in minutes):</label>
-        <input type="number" id="time-limit" placeholder="Enter minutes">
-        <label for="spending-limit">Spending Limit (in INR):</label>
-        <input type="number" id="spending-limit" placeholder="Enter amount">
+        <div class="limit-input">
+            <label for="time-limit">Time Limit (in minutes):</label>
+            <input type="number" id="time-limit" placeholder="Enter minutes">
+        </div>
+        <div class="limit-input">
+            <label for="spending-limit">Spending Limit (in INR):</label>
+            <input type="number" id="spending-limit" placeholder="Enter amount">
+        </div>
         <button onclick="setLimits()">Set Limits</button>
     </section>
 
+    <!-- Game Rules Modal -->
+    <div id="game-rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Game Rules</h2>
+            <div id="rules-list"></div>
+        </div>
+    </div>
+
+    <section id="community-feedback">
+        <h2>Community Feedback</h2>
+        <textarea id="community-suggestion" placeholder="Share your thoughts and suggestions to improve the platform"></textarea>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Responsible Gaming Platform</p>
+        <p>&copy; 2025 Curated by LogicMavericks</p>
     </footer>
 
     <script src="script.js"></script>

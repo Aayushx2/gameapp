@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,146 +6,220 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #333333);
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header Styles */
 header {
-    text-align: center;
-    background-color: #2d3e50;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 40px 20px;
-    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 header p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Login Section Styles */
+#login {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#login input[type="text"], #login input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #fff;
+}
+
+#login button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#login button:hover {
+    background-color: #0056b3;
+}
+
+/* Login Success Message */
+#login-message {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
     font-size: 18px;
-    margin-top: 5px;
+    text-align: center;
 }
 
 /* Section Styles */
 section {
-    max-width: 800px;
-    margin: 20px auto;
+    margin: 20px;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #2d3e50;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Input Fields */
-input[type="text"],
-input[type="password"],
-input[type="number"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-    border-color: #2d3e50;
-    outline: none;
-}
-
-/* Buttons */
-button {
+input[type="text"], input[type="number"], textarea {
     width: 100%;
     padding: 12px;
-    background-color: #2d3e50;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #222;
     color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #1a2b37;
-}
-
-/* Responsive Design */
-@media screen and (min-width: 768px) {
-    section {
-        padding: 30px;
-    }
-
-    button {
-        width: auto;
-        display: inline-block;
-        padding: 12px 30px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #2d3e50;
-    color: #fff;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 14px;
-}
-
-/* Special Section Styles */
-#user-greeting {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2d3e50;
-    text-align: center;
-}
-
-#game-reporting textarea {
+textarea {
     height: 120px;
 }
 
-#game-transparency,
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #444;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: white;
+    cursor: pointer;
+}
+
+/* Set Your Limits Styles */
 #responsible-gaming {
+    background-color: rgba(50, 50, 50, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.limit-input {
+    margin-bottom: 15px;
+}
+
+.limit-input input {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Community Feedback */
+#community-feedback {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#community-feedback textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Adding a nice effect to the game reporting section */
-#game-reporting button {
-    margin-top: 10px;
+footer p {
+    font-size: 1.2em;
 }
 
-#game-transparency button,
-#responsible-gaming button {
-    width: 50%;
-    margin-top: 10px;
+/* Hover Effects */
+button:hover {
+    background-color: #0056b3;
 }
 
-/* Floating Button for Better UX */
-button:active {
-    transform: scale(0.98);
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #333;
+}
+
+/* Transition Effects */
+* {
+    transition: all 0.3s ease;
 }
